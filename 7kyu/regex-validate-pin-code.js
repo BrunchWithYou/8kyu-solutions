@@ -9,6 +9,6 @@
 
 // My solution
 
-function validatePIN (pin) {
-    return pin.length== 4 || pin.length== 6 ? (/^[0-9]\d*$/.test(pin)) : false
-    } 
+function validatePIN(pin) {
+  return pin.length == 4 || pin.length == 6 ? /^[0-9]\d*$/.test(pin) : false;
+}
