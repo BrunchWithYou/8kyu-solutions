@@ -23,10 +23,10 @@ var encryptThis = function(text) {
     let newStr = text.split(' ')
     
     return newStr.map((e,i)=>{
-      if(newStr[i].length>2){ //if two or more letters return charcode and switch 2nd char to last
+      if(newStr[i].length>2){ //if two or more letters return charcode + last letter + rest of letters excluding first two + 2nd letter
         return newStr[i][0]=newStr[i].charCodeAt(0) + newStr[i].split('').pop() + newStr[i].slice(2,newStr[i].length-1) + newStr[i].slice(1,2)
       } else return newStr[i][0]=newStr[i].charCodeAt(0) + newStr[i].slice(1) // else return charcode and 2nd letter
       
-    }).join(' ')
+    }).join(' ') //make sure to join since map returns array
     
   }
