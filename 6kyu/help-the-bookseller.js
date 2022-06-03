@@ -31,18 +31,21 @@
 
 function stockList(listOfArt, listOfCat){
     let answer = []
-    let list = listOfArt.map(e=>e.split(' '))
-    if(listOfArt.length===0){
+    
+    let list = listOfArt.map(e=>e.split(' ')) // splitting the names and numbers into a workable array
+    
+    if(listOfArt.length ===0 || listOfCat.length ===0){ // return '' for blank L or M
       return ''
     }
+    
     listOfCat.forEach(e=>{
-      let count = 0
+      let count = 0 //setting count at the start of our forEach will reset to 0 everytime this runs
       for(let i = 0;i<list.length;i++){
-        if(list[i][0][0].includes(e)){
-          count+=+list[i][1];        
+        if(list[i][0][0].includes(e)){ //if the first letter is included when we loop through each category
+          count+=(+list[i][1]);        // Then we add it to the running total after converting it to a number by using a unary operator
         }
       }
-      answer.push(`(${e} : ${count})`);
+      answer.push(`(${e} : ${count})`); // push to our answer using a template literal
     })
-    return (answer.join(' - '))
+    return (answer.join(' - ')) // join your array of answers to a string separated by - to match the output
   }
