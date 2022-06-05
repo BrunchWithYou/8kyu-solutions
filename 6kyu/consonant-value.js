@@ -24,16 +24,16 @@
 // My solution
 
 function solve(s) {
-  let sSplit = s.split('')
+  let sArr = s.split('')
   let vowelsArr = 'aeiou'.split('')
   let alphabetArr = 'abcdefghijklmnopqrstuvwxyz'.split('')
   let count = 0
   let answer = []
   
-  sSplit.forEach((e,i)=>{ //loop through the arr of string
+  sArr.forEach((e,i)=>{ //loop through the arr of string
     if(!vowelsArr.includes(e)){ //if vowels are not included when iteration of e is ran
         return answer.push(count+=alphabetArr.indexOf(e)+1) // then push to answer the running count total
-      } else return count=0 //else reset the count
+      } else return count = 0 //else reset the count
     })
   
   return (Math.max(...answer)) //return the max of the answer array
