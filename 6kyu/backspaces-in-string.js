@@ -24,3 +24,17 @@ function cleanString(s) {
     
     return answer.join('')
   }
+
+// Refactor
+
+  function cleanString(s) {
+    let strArr = s.split('')
+    
+    let answer = []
+    
+    strArr.forEach((element,index)=>{
+      return element === '#' ? answer.pop() : answer.push(element)
+    })
+    
+    return answer.join('')
+  }
