@@ -23,11 +23,11 @@ function rot13(str) {
       let originalStrIndex = alphabet.indexOf((str[i]))
       if(rot13[originalStrIndex]){
         answer+=rot13[originalStrIndex]
-        answer.replace('undefined',' ')
       } else {
         answer+=str[i]
       }
-    }console.log(answer)
+    }
+  console.log(answer)
   return answer
   }
   
