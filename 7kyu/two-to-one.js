@@ -11,7 +11,7 @@
 // a = "abcdefghijklmnopqrstuvwxyz"
 // longest(a, a) -> "abcdefghijklmnopqrstuvwxyz"
 
-// My solution
+// My solution using new set
 
 function longest(s1, s2) {
     let newStr = s1+s2
