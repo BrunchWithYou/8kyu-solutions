@@ -7,8 +7,14 @@
 
 // Input: 123456789 Output: 987654321
 
-// My solution getting back to 7 kyus
+// My solution getting back to 7 kyus 
+
 
 function descendingOrder(n){
     return +n.toString().split('').sort((a,b)=>b-a).join('')
   }
+
+// + to change to number
+// change to string to be able to use the split method
+// use the sort to change order
+// use join to properly merge the array back to one single string of number
