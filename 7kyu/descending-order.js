@@ -7,7 +7,7 @@
 
 // Input: 123456789 Output: 987654321
 
-// My solution
+// My solution getting back to 7 kyus
 
 function descendingOrder(n){
     return +n.toString().split('').sort((a,b)=>b-a).join('')
