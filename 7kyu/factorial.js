@@ -17,3 +17,16 @@ function factorial(n)
     return n*factorial(n-1)
   }
 }
+
+// Your task is to write function factorial.
+
+// https://en.wikipedia.org/wiki/Factorial
+
+
+function factorial(n){
+  let count = 1
+    for(let i = n;n>0;n--){
+      count*=n
+    }
+    return count
+  }
